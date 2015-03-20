@@ -1,0 +1,20 @@
+/*
+    Document   : ccpStyles
+    Created on : Mar 3, 2015, 5:33:43 PM
+    Author     : charlie
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root {
+    display: block;
+}
+
+.sideNav {
+    float: left;
+    padding-right: 20px;
+}
+
+.pageContent {
+    float: left;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Cat Clicker Premium</title>
+        <link rel="stylesheet" type="text/css" href="css/ccpStyles.css" />
+    </head>
+    <body
+        <!-- the list of cats -->
+        <div id="indexPageSideNav" class="sideNav">
+            <ul id="ccCatList"></ul>
+        </div>
+
+        <!-- the detail display -->
+        <div id="indexPageContent" class="pageContent">
+            <h2 id="ccDetTitle"></h2>
+            <img id="ccDetImg" src=""/>
+            <h2 id="ccDetClickCnt">I've been clicked <span>ts</span></h2>
+            <div id="ccAdmin">
+                <button name="admin">Admin</button>
+            </div>
+        </div>
+
+        <!-- Admin form -->
+        <div id="ccAdminView">
+            <form name="ccAdminForm">
+                Title:
+                <input type="text" name="title" />
+                Image URL:
+                <input type="text" name="image" />
+                Number of clicks:
+                <input type="text" name="clicks" />
+            </form>
+            <button name="save">Save</button>
+            <button name="cancel">Cancel</button>
+        </div>
+
+        <!-- scripts -->
+        <script src="../jQuery/1.11.2/jquery-1.11.2.min.js"></script>
+        <script src="js/ccp.js"></script>
+    </body>
+</html>
