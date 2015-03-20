@@ -48,7 +48,25 @@
         },
 
         onAdminSave: function() {
-            alert('SAVE');
+            var model = catClickerController.currentViewDetailModel,
+                newVals = catAdminView.getFormValues(),
+                i;
+
+            for (i = 0; i < newVals.length; i++) {
+                switch (newVals[i].name) {
+                    case 'title':
+                        model.title = newVals[i].value;
+                        break;
+                    case 'image':
+                        model.image = newVals[i].value;
+                        break;
+                    case 'clicks':
+                        model.clickCnt = newVals[i].value;
+                        break;
+                }
+            }
+            catListView.init();
+            catDetailView.render();
         },
 
         toggleAdminMode: function() {
@@ -114,6 +132,10 @@
                     .click(catClickerController.onAdminCancel);
             this.setFormValues();
             this.hide();
+        },
+
+        getFormValues: function() {
+            return this.form.serializeArray();
         },
 
         hide: function() {
@@ -190,6 +212,7 @@
         el: $('#ccCatList'),
 
         init: function() {
+            this.el.empty();
             this.render();
         },
 
